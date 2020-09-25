@@ -20,7 +20,4 @@ hashtag = "#" + hashtag
 cnt = int(input("Enter number of tweets to retrieve:"))
 
 for tweet in tweepy.Cursor(api.search,q=hashtag,lang="en").items(cnt):
-    output_file.write(tweet.text + '\n')
-
-
-
+    output_file.write(unicode(tweet.text).encode("utf-8") + '\n')
