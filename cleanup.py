@@ -10,7 +10,7 @@ def tweet_cleaner(text):
     noRT = re.sub(r'^[RT]+','',text)
     nomention = re.sub(r'@[A-Za-z0-9_:]+','',noRT)
     nourl = re.sub(r'(https?:\/\/)(\s)*(www\.)?(\s)*((\w|\s)+\.)*([\w\-\s]+\/)*([\w\-]+)((\?)?[\w\s]*=\s*[\w\%&]*)*','',nomention)
-    alphanum_only = re.sub("[^a-zA-Z0-9]", " ",nourl)
+    alphanum_only = re.sub("[^a-zA-Z0-9]", '',nourl)
     stripped = alphanum_only.lower().strip()
     return stripped
 
