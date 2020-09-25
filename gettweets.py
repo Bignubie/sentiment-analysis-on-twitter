@@ -58,8 +58,8 @@ if not query_yes_no("Do you want to keep retweets?"):
      query = query + " -filter:retweets"
 
 for tweet in tweepy.Cursor(api.search,q=query,lang="en",tweet_mode='extended').items(cnt):
-    output_file.write(tweet.text+'\n')
-    tweets.append(tweet.text)
+    output_file.write(tweet.full_text+'\n')
+    tweets.append(tweet.full_text)
 
 
 output_file.close()
@@ -70,4 +70,5 @@ if len(tweets)!=1:
     print(str(len(tweets)) + " tweets collected!")
 else:
     print(str(len(tweets)) + " tweet collected!")
+
 
