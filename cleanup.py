@@ -12,7 +12,8 @@ def tweet_cleaner(text):
     nourl = re.sub('https?://[A-Za-z0-9./]+','',nomention)
     alphanum_only = re.sub(r'[^a-zA-Z0-9 ]+', '',nourl)
     stripped = alphanum_only.lower().strip()
-    return stripped
+    res = re.sub(' +', ' ', stripped)
+    return res
 
 ctweets = []
 for tweet in tweets:
