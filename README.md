@@ -15,3 +15,8 @@ Twitter is a growing platform with more than 321 million active users, sending a
 - Use different algorithms to perform supervised learning
 - Hyperparameter tuning using Validation dataset
 - Testing the model on new tweets (Test dataset)
+
+## Work done till now    
+- `gettweets.py` Scrap Tweets corresponding to the user query, filter undesired tweets and dump the data in a file.
+- `cleanup.py` Load the scrapped tweets and preprocess them to remove urls, handles and unnecessary characters.
+- `test.py` Test the progress till now.
