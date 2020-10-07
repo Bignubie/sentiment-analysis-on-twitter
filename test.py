@@ -1,4 +1,5 @@
 // FILE FOR TESTING PURPOSES 
+// SENTIMENTAL ANALYSIS
 
 import tweepy
 import pickle
