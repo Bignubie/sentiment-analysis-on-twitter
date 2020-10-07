@@ -61,7 +61,6 @@ for tweet in tweepy.Cursor(api.search,q=query,lang="en",tweet_mode='extended').i
     output_file.write(tweet.full_text+'\n')
     tweets.append(tweet.full_text)
 
-
 output_file.close()
 output_file = open("tweetdump","wb")
 pickle.dump(tweets,output_file)
